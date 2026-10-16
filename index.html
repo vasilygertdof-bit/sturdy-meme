@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F7F7F7" />
+  <title>Да / Нет / Хочу / Помоги</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app" aria-label="Выбор слова">
+    <button class="answer-card answer-card--yes" type="button" data-speech="Да" aria-label="Произнести Да">
+      <span class="answer-card__emoji" aria-hidden="true">👍</span>
+      <span class="answer-card__text">ДА</span>
+    </button>
+    <button class="answer-card answer-card--no" type="button" data-speech="Нет" aria-label="Произнести Нет">
+      <span class="answer-card__emoji" aria-hidden="true">👎</span>
+      <span class="answer-card__text">НЕТ</span>
+    </button>
+    <button class="answer-card answer-card--want" type="button" data-speech="Хочу" aria-label="Произнести Хочу">
+      <span class="answer-card__emoji" aria-hidden="true">🙋</span>
+      <span class="answer-card__text">ХОЧУ</span>
+    </button>
+    <button class="answer-card answer-card--help" type="button" data-speech="Помоги" aria-label="Произнести Помоги">
+      <span class="answer-card__emoji" aria-hidden="true">🆘</span>
+      <span class="answer-card__text">ПОМОГИ</span>
+    </button>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

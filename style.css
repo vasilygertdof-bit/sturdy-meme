@@ -1,0 +1,41 @@
+* { box-sizing: border-box; }
+html { background: #f7f7f7; }
+body {
+  margin: 0; min-height: 100vh; min-height: 100dvh;
+  background: #f7f7f7; color: #202020;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+.app {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 12px; width: 100%; height: 100vh; height: 100dvh;
+  padding: max(16px, env(safe-area-inset-top))
+           max(16px, env(safe-area-inset-right))
+           max(16px, env(safe-area-inset-bottom))
+           max(16px, env(safe-area-inset-left));
+}
+.answer-card {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 12px; min-width: 0; min-height: 0; border: 0; border-radius: 24px;
+  padding: 12px 4px; color: #202020; font: inherit; cursor: pointer;
+  user-select: none; -webkit-user-select: none; touch-action: manipulation;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .06);
+  transition: transform 120ms ease, filter 120ms ease;
+}
+.answer-card--yes { background: #bfe7c6; }
+.answer-card--no { background: #f3c1c1; }
+.answer-card--want { background: #ffe3a6; }
+.answer-card--help { background: #c9d9ff; }
+.answer-card:active { transform: scale(.97); filter: brightness(.98); }
+.answer-card:focus-visible { outline: 4px solid #202020; outline-offset: 2px; }
+.answer-card__emoji { font-size: clamp(42px, 12vw, 86px); line-height: 1.1; }
+.answer-card__text {
+  font-size: clamp(22px, 6.5vw, 58px);
+  font-weight: 800; line-height: 1.1; letter-spacing: .01em;
+}
+@media (prefers-reduced-motion: reduce) {
+  .answer-card { transition: none; }
+  .answer-card:active { transform: none; }
+}
